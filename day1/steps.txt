@@ -1,0 +1,39 @@
+1. Regretion testing, manual testing -> Auto 
+
+2. Selenium 
+	IDE
+	Remote Control
+	Web Driver
+	Server
+	Selenium Grid2
+
+3.0.	Intall
+	1) browser Firefox
+	2) Selenium IDE http://release.seleniumhq.org/selenium-ide/2.9.0/selenium-ide-2.9.0.xpi
+	3) Selenium IDE plugin https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/
+	4) Selenium IDE Button https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-button/?src=ss	
+	5) add button to firefox ...
+
+
+3.(Press button plugin ) Record - record your web user actions(open, input text, search)
+	Can generate code via format
+		1. Activate formats -> Options, enable "enable experental feauters"
+		2. Press Format -> Then copy code and paste into IDE
+		3. Download required libraries 
+		  3.1 http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+		  3.2 http://search.maven.org/remotecontent?filepath=junit/junit/4.12/junit-4.12.jar
+		  3.3 http://goo.gl/yLJLZg
+		4. Add jars to Java Project(IDEA Project)
+			4.1 Ctrl+Alt+Shift+S -> Go to libraries -> add above jars
+		5. Run generated test via record in Intellij IDEA
+
+4. HTML -> Locator (XPath, CssSelector)
+	HTML online course https://www.codecademy.com/tracks/web 
+
+5. Add plugins for firefox (FireBug, FirePath)
+	FirePath(part of FireBug) helps to generate locators
+
+6. MAP for locators
+
+7. ...
+
