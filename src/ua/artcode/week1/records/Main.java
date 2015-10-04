@@ -25,7 +25,7 @@ public class Test {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-    @org.junit.Test
+    @Test
     public void testCase() throws Exception {
         driver.get(baseUrl + "/");
         driver.findElement(By.linkText("?")).click();
