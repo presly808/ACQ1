@@ -1,16 +1,14 @@
-mport java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
+package ua.artcode.week1.day1.records;
+
 
 import org.junit.*;
-
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
+import java.util.concurrent.TimeUnit;
+import static org.junit.Assert.fail;
 
-public class Test {
+
+public class GeneratedTestWithSelIDE {
 
 
     private WebDriver driver;
