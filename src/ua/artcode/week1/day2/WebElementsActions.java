@@ -6,12 +6,12 @@ import org.openqa.selenium.interactions.Action;
 /**
  * Created by ViTaLES on 04.10.2015.
  */
-public class WebElementsAction {
+public class WebElementsActions {
 
 
     private WebDriver driver;
 
-    public WebElementsAction(WebDriver webDriver) {
+    public WebElementsActions(WebDriver webDriver) {
         this.driver = driver;
     }
 

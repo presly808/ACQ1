@@ -1,13 +1,13 @@
 1. Regretion testing, manual testing -> Auto 
 
-2. Selenium 
+2. Selenium
 	IDE
 	Remote Control
 	Web Driver
 	Server
 	Selenium Grid2
 
-	Intall
+	Install
 	1) browser Firefox
 	2) Selenium IDE http://release.seleniumhq.org/selenium-ide/2.9.0/selenium-ide-2.9.0.xpi
 	3) Selenium IDE plugin https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/

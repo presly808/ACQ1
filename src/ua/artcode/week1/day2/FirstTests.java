@@ -3,7 +3,6 @@ package ua.artcode.week1.day2;
 import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ua.artcode.week1.day2.WebElementsAction;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,14 +14,14 @@ public class FirstTests {
 
     private static WebDriver driver;
     private static String baseUrl;
-    static WebElementsAction web;
+    static WebElementsActions web;
 
     @BeforeClass
     public static void setUp() throws Exception {
         driver = new FirefoxDriver();
         baseUrl = "http://ellos.se";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        web = new WebElementsAction(driver);
+        web = new WebElementsActions(driver);
     }
 
     @Test
