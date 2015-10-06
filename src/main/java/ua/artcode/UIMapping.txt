@@ -1,0 +1,20 @@
+#Main Page
+
+DamMenu=id("");
+DamMenu=class("linkItem");
+
+DamMenuLink=css(.subSiteMenuLink > a[href='/dam'])
+DamMenuLink=xpath(.//div[@class='subSiteMenuLink']/a[@href='/dam'])
+
+DamSubMenuLink=css(.subSiteMenuLink a[href='/dam/overdelar/klanningar-tunikor/klanningar'])
+
+SearchInputField=css(#SearchTerm)
+SearchInputField=xpath(.//input[@id='SearchTerm'])
+
+KundService=css(.dropDownTitle.customerSupportLink.dropDownTitle)
+LoginButton=xpath(.//a[@id='showlogin'])
+
+
+
+
+#

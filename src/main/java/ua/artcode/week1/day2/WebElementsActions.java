@@ -3,9 +3,7 @@ package ua.artcode.week1.day2;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 
-/**
- * Created by ViTaLES on 04.10.2015.
- */
+
 public class WebElementsActions {
 
 
@@ -82,6 +80,11 @@ public class WebElementsActions {
 
 
     //Home work; created method swithToWindow()
+
+    public void swithToWindow(String windowName){
+        driver.switchTo().window(windowName);
+    }
+
 
 
 }
