@@ -1,4 +1,4 @@
-package ua.artcode.week1.day2;
+package ua.artcode.util;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
@@ -6,19 +6,18 @@ import org.openqa.selenium.interactions.Action;
 
 public class WebElementsActions {
 
-
     private WebDriver driver;
 
     public WebElementsActions(WebDriver webDriver) {
-        this.driver = driver;
+        this.driver = webDriver;
     }
 
     public void openSite(String url) {
         driver.get(url);
     }
 
-    public void clickButton(String buttonLacotor) {
-        driver.findElement(By.xpath(buttonLacotor)).click();
+    public void clickButton(String buttonLocator) {
+        driver.findElement(By.xpath(buttonLocator)).click();
     }
 
     public void clckLink(String linkLocator) {
@@ -39,7 +38,7 @@ public class WebElementsActions {
         driver.findElement(By.xpath(inputLocator)).sendKeys(Keys.ENTER);
     }
 
-    private boolean isElementPresent(By by) {
+    public boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
             return true;
