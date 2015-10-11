@@ -1,14 +1,14 @@
 package ua.artcode.util;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Action;
 
+import static ua.artcode.util.ConfigData.getSelectorBy;
 
-public class WebElementsActions implements WebElementsActionsI {
+public class WebElementActionsWithConfigData implements WebElementsActionsI {
 
     private WebDriver driver;
 
-    public WebElementsActions(WebDriver webDriver) {
+    public WebElementActionsWithConfigData(WebDriver webDriver) {
         this.driver = webDriver;
     }
 
@@ -19,18 +19,18 @@ public class WebElementsActions implements WebElementsActionsI {
 
     @Override
     public void clickButton(String buttonLocator) {
-        driver.findElement(By.xpath(buttonLocator)).click();
+        driver.findElement(getSelectorBy(buttonLocator)).click();
     }
 
     @Override
     public void clickLink(String linkLocator) {
-        driver.findElement(By.xpath(linkLocator)).click();
+        driver.findElement(getSelectorBy(linkLocator)).click();
     }
 
     @Override
     public void input(String inputLocator, String inputData) {
-        driver.findElement(By.xpath(inputLocator)).clear();
-        driver.findElement(By.xpath(inputLocator)).sendKeys(inputData);
+        driver.findElement(getSelectorBy(inputLocator)).clear();
+        driver.findElement(getSelectorBy(inputLocator)).sendKeys(inputData);
     }
 
     /*
@@ -38,9 +38,9 @@ public class WebElementsActions implements WebElementsActionsI {
      */
     @Override
     public void inputAndClickEnter(String inputLocator, String inputData) {
-        driver.findElement(By.xpath(inputLocator)).clear();
-        driver.findElement(By.xpath(inputLocator)).sendKeys(inputData);
-        driver.findElement(By.xpath(inputLocator)).sendKeys(Keys.ENTER);
+        driver.findElement(getSelectorBy(inputLocator)).clear();
+        driver.findElement(getSelectorBy(inputLocator)).sendKeys(inputData);
+        driver.findElement(getSelectorBy(inputLocator)).sendKeys(Keys.ENTER);
     }
 
     @Override
@@ -90,10 +90,7 @@ public class WebElementsActions implements WebElementsActionsI {
     //Home work; created method swithToWindow()
 
     @Override
-    public void swithToWindow(String windowName){
+    public void swithToWindow(String windowName) {
         driver.switchTo().window(windowName);
     }
-
-
-
 }

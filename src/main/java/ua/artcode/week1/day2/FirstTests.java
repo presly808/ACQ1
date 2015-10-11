@@ -4,6 +4,7 @@ import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ua.artcode.util.WebElementsActions;
+import ua.artcode.util.WebElementsActionsI;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +16,7 @@ public class FirstTests {
 
     private static WebDriver driver;
     private static String baseUrl;
-    static WebElementsActions web;
+    static WebElementsActionsI web;
 
     @BeforeClass
     public static void setUp() throws Exception {
@@ -35,12 +36,12 @@ public class FirstTests {
         driver.findElement(By.cssSelector("#ctl00_ctl00_conMain_conMain_LoginControl_LoginButton")).click(); //login button
     }
 
+    @Ignore
     @Test
     public void test2() throws Exception {
 
         driver.findElement(By.cssSelector("")).click(); //your locators
         driver.findElement(By.cssSelector("")).click();
-
     }
 
 

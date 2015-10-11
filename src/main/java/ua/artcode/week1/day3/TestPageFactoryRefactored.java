@@ -7,15 +7,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-
-public class TestPageFactory {
+public class TestPageFactoryRefactored {
 
     private static WebDriver driver;
 
-    private POMainPage mainPage;
+    private POMainPageRefactored mainPage;
 
     @BeforeClass
-    private static void setUp() {
+    public static void setUp() {
         driver = new FirefoxDriver();
         driver.get("https://ellos.se");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -24,7 +23,7 @@ public class TestPageFactory {
     @Test
     public void goToLoginPage() {
         System.out.println("Test start");
-        mainPage = new POMainPage(driver);
+        mainPage = new POMainPageRefactored(driver);
         mainPage.clickLogo();
         mainPage.switchToLoginPageLink();
         System.out.println("Test end");

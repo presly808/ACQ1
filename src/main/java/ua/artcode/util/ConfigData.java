@@ -14,13 +14,13 @@ import java.util.Properties;
 public class ConfigData {
 
 
-    private static String uiMappingFileLocation = "UIMapping.properties";
+    private static String uiMappingFileLocation = "/UIMapping.properties";
     private static Map selectorsMap;
 
-    private static void loadAllData() {
+    private static synchronized void loadAllData() {
         Properties properties = new Properties();
         try {
-            properties.load(new FileReader(uiMappingFileLocation));
+            properties.load(IOUtils.getClassPathResource(uiMappingFileLocation));
             selectorsMap = properties;
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,7 +34,7 @@ public class ConfigData {
         return String.valueOf(selectorsMap.get(key));
     }
 
-    public By getSelectorBy(String selectorPropertieName){
+    public static By getSelectorBy(String selectorPropertieName) {
 
         String value = getValue(selectorPropertieName);
 
@@ -49,18 +49,23 @@ public class ConfigData {
         // remember about quotes in selector value
         String selectorValue = value.substring(beginBraceIndex + 2, endBraceIndex - 1);
 
-        if ("id".equals(selectorType)){
+        if ("id".equals(selectorType)) {
             return By.id(selectorValue);
-        } else if("className".equals(selectorType)){
+        } else if ("className".equals(selectorType)) {
             return By.className(selectorValue);
-        } else if("xpath".equals(selectorType)){
+        } else if ("name".equals(selectorType)) {
+            return By.cssSelector(selectorValue);
+        } else if ("tagName".equals(selectorType)) {
+            return By.cssSelector(selectorValue);
+        } else if ("xpath".equals(selectorType)) {
             return By.xpath(selectorValue);
-        } else if("css".equals(selectorType)){
+        } else if ("css".equals(selectorType)) {
+            return By.cssSelector(selectorValue);
+        } else if ("partialLinkText".equals(selectorType)) {
             return By.cssSelector(selectorValue);
         } else {
             throw new WrongPropertyTypeException(String.format("wrong type %s in file", selectorType));
         }
-
 
     }
 
