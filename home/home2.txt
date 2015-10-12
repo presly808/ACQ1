@@ -1,0 +1,52 @@
+Week Topics:
+
+    1. Patterns:
+    	Data Driven Testing
+    	Page Object + Page Factory(class)
+    	Page Element
+    	BDD
+    	Page Factory pattern
+
+    2. Created tests with Page Object + Page Factory(class)
+
+    3. Creating UIMapping
+
+    4. Created tests with UIMapping.properties file
+
+    5. JUnit:
+        - annotations
+        - hierarchy of framework
+        - the execution order of tests
+        - assertions
+
+    6. TestNG:
+        - annotations
+        - hierarchy of framework
+        - the execution order of tests
+        - assertions
+
+
+
+Home tasks:
+
+1. Write 100+ locators from the ellos.se, using all types of locators (put all locators to UIMapping.properties)
+2. Cover tests login, registration and add product to basket functions (Use Page Obj pattern )
+3. Add to WebElementsActions method switchToWindow() - who did not make
+
+
+Read / watch
+
+    Patterns:
+    https://kreisfahrer.gitbooks.io/selenium-webdriver/content/page_object_pattern_arhitektura_testovogo_proekta/ispolzovanie_patterna_page_object.html
+    http://internetka.in.ua/selenium-page-object/
+    https://code.google.com/p/selenium/wiki/PageObjects
+    https://code.google.com/p/selenium/wiki/PageFactory
+    http://www.seleniumhq.org/docs/06_test_design_considerations.jsp
+    http://autoqa.org/advanced-webdriver/patterns-page-object-model-pom-selenium.html
+
+
+    JUnit/TestNG
+    https://www.youtube.com/watch?v=QJZb1fNYh9c
+    https://www.youtube.com/watch?v=QqvaT0t2jOs&list=PLp18Zf576nRJMlHo_BEscqlNzRGosQnQo
+
+
