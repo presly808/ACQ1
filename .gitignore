@@ -1,6 +1,9 @@
 *.class
 
+#IDE
 .mtj.tmp/
+
+out/
 .idea
 *.iml
 
@@ -8,4 +11,7 @@
 *.jar
 *.war
 *.ear
+
+#maven
+target/
 
