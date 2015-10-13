@@ -1,5 +1,7 @@
-package ua.artcode.week1.day2;
+package home.week1;
 
+import org.junit.*;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
