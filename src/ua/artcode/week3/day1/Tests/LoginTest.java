@@ -41,6 +41,15 @@ public class LoginTest extends Fixture {
         loginPage.clickloginButton();
 
         System.out.println("FirstTest.test1");
+        //http://www.sazehgostar.com/SitePages/HomePage.aspx
+
+        // ?????????????? ???????
+/*        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager");
+        WebDriver driver = new FirefoxDriver(capabilities);
+        WebDriverWait wait = new WebDriverWait(driver, 10);*/
+
+
     }
 
 }
