@@ -1,6 +1,6 @@
 package trainings.junit.simple2.sample9;
 
-import org.assertj.core.api.SoftAssertions;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,9 +25,9 @@ public class AssertionsTest {
 
   @Test
   public void testSoftAssert() {
-	  SoftAssertions s = new SoftAssertions();
+/*	  SoftAssertions s = new SoftAssertions();
     s.assertThat(2 * 2).isEqualTo(3);
     s.assertThat(2 * 2).isEqualTo(5);
-    s.assertAll();
+    s.assertAll();*/
   }
 }

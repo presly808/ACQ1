@@ -1,4 +1,4 @@
-package ua.artcode.week2.day1;
+package ua.artcode.week3.day1.Pages;
 
 import org.openqa.selenium.WebDriver;
 import ua.artcode.week1.day2.WebElementsActions;
@@ -6,17 +6,16 @@ import ua.artcode.week1.day2.WebElementsActions;
 import java.io.IOException;
 
 /**
- * Created by ViTaLES on 10.10.2015.
+ * Created by lavi on 10/16/2015.
  */
 public class MainPage {
+
     WebDriver driver;
     WebElementsActions web;
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
         web = new WebElementsActions(driver);
-        //PageFactory.initElements(driver, this);
-        //PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);
     }
 
     public void clickLogo() throws IOException {
@@ -32,5 +31,6 @@ public class MainPage {
             System.out.println("SwitchTo Login Page was Incorrect");
         }
     }
+
 
 }

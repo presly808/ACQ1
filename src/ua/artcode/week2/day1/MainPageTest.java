@@ -37,7 +37,7 @@ public class MainPageTest {
     }
 
     @AfterClass
-    public static void down() {
+    public static void tearDown() {
         driver.quit();
     }
 

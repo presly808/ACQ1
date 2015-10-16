@@ -2,6 +2,8 @@ package ua.artcode.week1.day2;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 
@@ -12,11 +14,12 @@ import static ua.artcode.utils.ConfigData.ui;
  */
 public class WebElementsActions {
 
-
+    public static WebDriverWait waitForElement;
     private WebDriver driver;
 
     public WebElementsActions(WebDriver driver) {
         this.driver = driver;
+        waitForElement = new WebDriverWait(driver, 30);
     }
 
     public void openSite(String url) {
@@ -33,6 +36,10 @@ public class WebElementsActions {
 
     public void input(String inputLocator, String inputData) throws IOException {
         driver.findElement(ui(inputLocator)).clear();
+        driver.findElement(ui(inputLocator)).sendKeys(inputData);
+    }
+
+    public void inputWithoutCleaning(String inputLocator, String inputData) throws IOException {
         driver.findElement(ui(inputLocator)).sendKeys(inputData);
     }
 
@@ -88,6 +95,15 @@ public class WebElementsActions {
         driver.navigate().refresh();
     }
 
+    public boolean waitForElementPresent(String elementLocator) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+        try {
+            waitForElement.until(ExpectedConditions.visibilityOfElementLocated(ui(elementLocator)));
+            System.out.println(1);
+        } catch (NoSuchElementException Ex) {
+            return false;
+        }
+        return true;
+    }
 
     //Home work; created method swithToWindow()
 

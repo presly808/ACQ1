@@ -28,10 +28,10 @@ public class ConfigData {
         String findMetod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
         String target = partsOfLocators[1];
 
-        System.out.println(key);                //Logo
+/*        System.out.println(key);                //Logo
         System.out.println(partsOfLocators[0]); //cssSelector(
         System.out.println(findMetod);          //cssSelector
-        System.out.println(target);             //.ellos.active
+        System.out.println(target);             //.ellos.active*/
 
         // name.
         if(findMetod.equals("id")){
