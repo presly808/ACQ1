@@ -9,13 +9,13 @@ public class LoginFixture extends BrowserFixture {
 
   @BeforeClass
   public void login() {
-    System.out.println("Start test");
+    System.out.println("Start ctest");
 
   }
 
   @AfterClass
   public void logout() {
-    System.out.println("Finish test");
+    System.out.println("Finish tcest");
   }
 
 }

@@ -1,5 +1,6 @@
 package ua.artcode.week1.day2;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,9 +14,10 @@ import static ua.artcode.utils.ConfigData.ui;
  * Created by ViTaLES on 04.10.2015.
  */
 public class WebElementsActions {
-
+    static Logger log = Logger.getLogger(WebElementsActions.class);
     public static WebDriverWait waitForElement;
     private WebDriver driver;
+
 
     public WebElementsActions(WebDriver driver) {
         this.driver = driver;
@@ -28,19 +30,24 @@ public class WebElementsActions {
 
     public void clickButton(String buttonLacotor) throws IOException {
         driver.findElement(ui(buttonLacotor)).click();
+        log.info("click Button" + buttonLacotor);
     }
 
     public void clckLink(String linkLocator) throws IOException {
         driver.findElement(ui(linkLocator)).click();
+        log.info("click Button" + linkLocator);
     }
 
     public void input(String inputLocator, String inputData) throws IOException {
         driver.findElement(ui(inputLocator)).clear();
         driver.findElement(ui(inputLocator)).sendKeys(inputData);
+        log.info("input - " + inputData + ", to  - " + inputLocator);
     }
 
     public void inputWithoutCleaning(String inputLocator, String inputData) throws IOException {
         driver.findElement(ui(inputLocator)).sendKeys(inputData);
+
+        log.info("input - " + inputData + ", to  - " + inputLocator);
     }
 
     /*
@@ -49,7 +56,9 @@ public class WebElementsActions {
     public void inputAndClickEnter(String inputLocator, String inputData) throws IOException {
         driver.findElement(ui(inputLocator)).clear();
         driver.findElement(ui(inputLocator)).sendKeys(inputData);
+        log.info("input - " + inputData + ", to  - " + inputLocator);
         driver.findElement(ui(inputLocator)).sendKeys(Keys.ENTER);
+        log.info("press ENTER button");
     }
 
     public boolean isElementPresent(String elementLocator) {
@@ -97,15 +106,25 @@ public class WebElementsActions {
 
     public boolean waitForElementPresent(String elementLocator) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
         try {
-            waitForElement.until(ExpectedConditions.visibilityOfElementLocated(ui(elementLocator)));
             System.out.println(1);
+            waitForElement.until(ExpectedConditions.visibilityOfElementLocated(ui(elementLocator)));
         } catch (NoSuchElementException Ex) {
             return false;
         }
         return true;
     }
 
-    //Home work; created method swithToWindow()
+
+    public boolean waitForInvisabilityOfElement(String elemeentLocator) {
+        try {
+            waitForElement.until(ExpectedConditions.invisibilityOfElementLocated(ui(elemeentLocator)));
+        } catch (NoSuchElementException Ex) {
+            return false;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
 
 
 }
