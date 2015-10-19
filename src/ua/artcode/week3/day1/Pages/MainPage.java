@@ -12,12 +12,10 @@ import java.io.IOException;
 public class MainPage extends Page{
 
     private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
-    public WebElementsActions web;
 
 
     public MainPage(WebDriverWrapper driver) {
         super(driver, MAIN_PAGE);
-        web = new WebElementsActions(driver);
     }
 
     public void clickLogo() throws IOException {

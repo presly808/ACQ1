@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 import ua.artcode.week3.day1.utils.ClassNameUtil;
 import ua.artcode.week3.day1.utils.WebDriverWrapper;
+import ua.artcode.week3.day1.utils.WebElementsActions;
 
 import static ua.artcode.week3.day1.utils.ConfigData.ui;
 
@@ -14,12 +15,15 @@ public abstract class Page {
 
     private String PAGE_URL;
     public WebDriverWrapper driverWrapper;
+    public WebElementsActions web;
+
 
     static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
     public Page(WebDriverWrapper dr, String page) {
         driverWrapper = dr;
         PAGE_URL = page;
+        web = new WebElementsActions(driverWrapper);
     }
 
     public Page(WebDriverWrapper driver) {

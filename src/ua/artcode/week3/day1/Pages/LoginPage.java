@@ -12,11 +12,9 @@ import java.io.IOException;
  */
 public class LoginPage extends Page{
 
-    public WebElementsActions web;
 
     public LoginPage(WebDriverWrapper driver) throws Exception {
         super(driver);
-        web = new WebElementsActions(driver);
     }
 
     public void fillEmailField() throws IOException {
