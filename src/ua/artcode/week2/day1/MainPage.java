@@ -1,13 +1,16 @@
+/*
 package ua.artcode.week2.day1;
 
 import org.openqa.selenium.WebDriver;
-import ua.artcode.week1.day2.WebElementsActions;
+import ua.artcode.week3.day1.utils.WebElementsActions;
 
 import java.io.IOException;
 
+*/
 /**
  * Created by ViTaLES on 10.10.2015.
- */
+ *//*
+
 public class MainPage {
     WebDriver driver;
     WebElementsActions web;
@@ -34,3 +37,4 @@ public class MainPage {
     }
 
 }
+*/

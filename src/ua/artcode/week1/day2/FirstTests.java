@@ -1,15 +1,19 @@
+/*
 package ua.artcode.week1.day2;
 
 import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import ua.artcode.week3.day1.utils.WebElementsActions;
 
 import java.util.concurrent.TimeUnit;
 
+*/
 /**
  * Created by ViTaLES on 03.10.2015.
  * cntr alt v
- */
+ *//*
+
 public class FirstTests {
 
     private static WebDriver driver;
@@ -50,3 +54,4 @@ public class FirstTests {
 
 }
 
+*/

@@ -2,21 +2,21 @@ package ua.artcode.week3.day1.Pages;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import ua.artcode.week1.day2.WebElementsActions;
+import ua.artcode.week3.day1.utils.PropertyLoader;
+import ua.artcode.week3.day1.utils.WebDriverWrapper;
+import ua.artcode.week3.day1.utils.WebElementsActions;
 
 import java.io.IOException;
 
 /**
  * Created by lavi on 10/16/2015.
  */
-public class MainPage {
-    static Logger log = Logger.getLogger(MainPage.class);
-    WebDriver driver;
-    WebElementsActions web;
+public class MainPage extends Page{
 
-    public MainPage(WebDriver driver) {
-        this.driver = driver;
-        web = new WebElementsActions(driver);
+    private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
+
+    public MainPage(WebDriverWrapper driver) {
+        super(driver, MAIN_PAGE);
     }
 
     public void clickLogo() throws IOException {

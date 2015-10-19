@@ -1,15 +1,17 @@
+/*
 package ua.artcode.week2.day1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import ua.artcode.week1.day2.WebElementsActions;
+import ua.artcode.week3.day1.utils.WebElementsActions;
 
+*/
 /**
  * Created by ViTaLES on 10.10.2015.
- */
+ *//*
+
 public class PageFactoryMainPage {
 
     WebDriver driver;
@@ -47,3 +49,4 @@ public class PageFactoryMainPage {
 
 
 }
+*/

@@ -1,19 +1,20 @@
+/*
 package ua.artcode.week2.day1;
 
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ua.artcode.week1.day2.WebElementsActions;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+*/
 /**
  * Created by ViTaLES on 10.10.2015.
- */
+ *//*
+
 public class PageFactoryTest {
 
     static WebDriver driver;
@@ -44,3 +45,4 @@ public class PageFactoryTest {
     }
 
 }
+*/

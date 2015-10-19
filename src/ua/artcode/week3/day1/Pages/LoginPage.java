@@ -2,20 +2,20 @@ package ua.artcode.week3.day1.Pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import ua.artcode.week1.day2.WebElementsActions;
+import ua.artcode.week3.day1.utils.WebDriverWrapper;
+import ua.artcode.week3.day1.utils.WebElementsActions;
 
 import java.io.IOException;
 
 /**
  * Created by lavi on 10/16/2015.
  */
-public class LoginPage {
+public class LoginPage extends Page{
 
-    WebDriver driver;
     WebElementsActions web;
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
+    public LoginPage(WebDriverWrapper driver) {
+        super(driver);
         web = new WebElementsActions(driver);
     }
 

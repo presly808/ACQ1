@@ -1,3 +1,4 @@
+/*
 package ua.artcode.week2.day1;
 
 import org.junit.AfterClass;
@@ -9,9 +10,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+*/
 /**
  * Created by ViTaLES on 12.10.2015.
- */
+ *//*
+
 public class MainPageTest {
 
     static WebDriver driver;
@@ -42,3 +45,4 @@ public class MainPageTest {
     }
 
 }
+*/

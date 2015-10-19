@@ -1,31 +1,27 @@
-package ua.artcode.week1.day2;
+package ua.artcode.week3.day1.utils;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 
-import static ua.artcode.utils.ConfigData.ui;
+import static ua.artcode.week3.day1.utils.ConfigData.ui;
 
 /**
  * Created by ViTaLES on 04.10.2015.
  */
 public class WebElementsActions {
-    static Logger log = Logger.getLogger(WebElementsActions.class);
+
+    static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     public static WebDriverWait waitForElement;
-    private WebDriver driver;
+    private WebDriverWrapper driver;
 
 
-    public WebElementsActions(WebDriver driver) {
+    public WebElementsActions(WebDriverWrapper driver) {
         this.driver = driver;
         waitForElement = new WebDriverWait(driver, 30);
-    }
-
-    public void openSite(String url) {
-        driver.get(url);
     }
 
     public void clickButton(String buttonLacotor) throws IOException {

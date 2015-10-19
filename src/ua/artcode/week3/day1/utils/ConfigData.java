@@ -1,4 +1,4 @@
-package ua.artcode.utils;
+package ua.artcode.week3.day1.utils;
 
 import org.openqa.selenium.By;
 
