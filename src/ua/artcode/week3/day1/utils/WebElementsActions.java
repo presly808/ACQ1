@@ -16,7 +16,7 @@ public class WebElementsActions {
 
     static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     public static WebDriverWait waitForElement;
-    private WebDriverWrapper driver;
+    public WebDriverWrapper driver;
 
 
     public WebElementsActions(WebDriverWrapper driver) {

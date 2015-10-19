@@ -1,7 +1,10 @@
 package ua.artcode.week3.day1.utils;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.internal.Executable;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,9 +19,16 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot{
     private static final int TIME_TO_WAIT = Integer.parseInt(PropertyLoader.loadProperty("wait.timeout"));
     public static WebDriver driver;
 
-    public WebDriverWrapper(WebDriver driver) {
-        this.driver = driver;
+
+    public WebDriverWrapper(WebDriver dr) {
+        this.driver = dr;
     }
+
+
+    public WebDriver getOriginalDriver(){
+        return this.driver;
+    }
+
 
     @Override
     public void get(String s) {
@@ -89,8 +99,26 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot{
         return driver.manage();
     }
 
+    //finished for other br type
     @Override
-    public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
+    public <X> X getScreenshotAs(OutputType<X> outType) {
+        try {
+            if (driver instanceof FirefoxDriver) {
+                return ((FirefoxDriver) driver).getScreenshotAs(outType);
+            } else if (driver instanceof ChromeDriver) {
+                return ((ChromeDriver) driver).getScreenshotAs(outType);
+            } else if (driver instanceof InternetExplorerDriver) {
+                return ((InternetExplorerDriver) driver).getScreenshotAs(outType);
+            } else if (driver instanceof PhantomJSDriver) {
+                return ((PhantomJSDriver) driver).getScreenshotAs(outType);
+            } else
+                return null;
+
+        }
+        catch (Exception e) {
+
+        }
+
         return null;
     }
 }

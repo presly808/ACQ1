@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 import ua.artcode.week3.day1.utils.ClassNameUtil;
 import ua.artcode.week3.day1.utils.WebDriverWrapper;
-import ua.artcode.week3.day1.utils.WebElementsActions;
 
 import static ua.artcode.week3.day1.utils.ConfigData.ui;
 
@@ -13,16 +12,14 @@ import static ua.artcode.week3.day1.utils.ConfigData.ui;
  */
 public abstract class Page {
 
-    private String PAGE;
-    public WebElementsActions web;
+    private String PAGE_URL;
     public WebDriverWrapper driverWrapper;
 
     static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
-    public Page(WebDriverWrapper driver, String PAGE) {
-        this.driverWrapper = driver;
-        this.PAGE = PAGE;
-        web = new WebElementsActions(driver);
+    public Page(WebDriverWrapper dr, String page) {
+        driverWrapper = dr;
+        PAGE_URL = page;
     }
 
     public Page(WebDriverWrapper driver) {
@@ -32,7 +29,7 @@ public abstract class Page {
     public boolean openPage(){
         try{
             log.info("Start open page");
-            driverWrapper.get(PAGE);
+            driverWrapper.get(PAGE_URL);
         } catch (Exception e) {
             log.error("Error in open page");
             return false;
@@ -44,7 +41,7 @@ public abstract class Page {
     public boolean isOpenPage(String checkLocator){
         try{
             log.info("Page: check is page open. " + checkLocator + " is present!");
-            web.isElementPresent(checkLocator);
+            driverWrapper.findElement(ui(checkLocator)).isEnabled();
         } catch (Exception e) {
             log.error("Page: Error with check page.");
             Assert.fail("Incorrect swatch");

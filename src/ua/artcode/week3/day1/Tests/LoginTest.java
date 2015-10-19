@@ -1,6 +1,8 @@
 package ua.artcode.week3.day1.Tests;
 
-import org.junit.Test;
+
+
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 

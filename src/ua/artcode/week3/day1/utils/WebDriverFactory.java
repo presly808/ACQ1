@@ -1,21 +1,17 @@
 package ua.artcode.week3.day1.utils;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.io.File;
+import org.testng.Assert;
 
 /**
  * Created by ViTaLES on 18.10.2015.
  */
 public class WebDriverFactory {
 
-    static WebDriverWrapper driver;
+    public static WebDriverWrapper driverWrapper;
 
     /*Browsers constants*/
     private static final String FIREFOX = "firefox";
@@ -34,29 +30,31 @@ public class WebDriverFactory {
     }
 
     public static WebDriverWrapper initDriver(){
-        driver = null;
 
-        if (FIREFOX.equals(browserName)) {
-            driver = new WebDriverWrapper( new FirefoxDriver());
-        } else if (PHANTOMJS.equals(browserName)) {
-/*            File phantomjs = Phanbedder.unpack();
+
+        if(FIREFOX.equals(browserName)){
+            driverWrapper = new WebDriverWrapper( new FirefoxDriver());
+        }else if(PHANTOMJS.equals(browserName)){
+/*
+            File phantomjs = Phanbedder.unpack();
             DesiredCapabilities caps = new DesiredCapabilities();
             caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjs.getAbsolutePath());
-            driverWripper = new WebDriverWrapper( new PhantomJSDriver(caps));*/
-        } else if (CHROME.equals(browserName)){
-            ChromeOptions options = new ChromeOptions();
-            driver = new WebDriverWrapper( new ChromeDriver(options));
-        } //TODO add IE
+            driverWrapper = new WebDriverWrapper( new PhantomJSDriver(caps));
+*/
 
-        else{
-            Assert.fail("Invalid driver name");
+        } else if(CHROME.equals(browserName)){
+            ChromeOptions options = new ChromeOptions();
+            driverWrapper = new WebDriverWrapper( new ChromeDriver(options));
         }
 
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
+        else {
+            Assert.fail("invalid driver name");
+        }
 
-        return driver;
+        driverWrapper.manage().deleteAllCookies();
+        driverWrapper.manage().window().maximize();
+
+        return driverWrapper;
     }
-
 
 }

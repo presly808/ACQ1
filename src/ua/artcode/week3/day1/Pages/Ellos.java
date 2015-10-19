@@ -1,6 +1,5 @@
 package ua.artcode.week3.day1.Pages;
 
-import org.openqa.selenium.WebDriver;
 import ua.artcode.week3.day1.utils.WebDriverWrapper;
 import ua.artcode.week3.day1.utils.WebElementsActions;
 
@@ -13,8 +12,9 @@ public class Ellos {
     public MainPage mainPage;
     public LoginPage loginPage;
 
-    public Ellos(WebDriverWrapper driver) {
+    public Ellos(WebDriverWrapper driver) throws Exception {
         web = new WebElementsActions(driver);
+
         mainPage = new MainPage(driver);
         loginPage = new LoginPage(driver);
     }

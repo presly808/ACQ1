@@ -1,7 +1,7 @@
 package ua.artcode.week3.day1.Pages;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
+
+import org.testng.Assert;
 import ua.artcode.week3.day1.utils.WebDriverWrapper;
 import ua.artcode.week3.day1.utils.WebElementsActions;
 
@@ -12,9 +12,9 @@ import java.io.IOException;
  */
 public class LoginPage extends Page{
 
-    WebElementsActions web;
+    public WebElementsActions web;
 
-    public LoginPage(WebDriverWrapper driver) {
+    public LoginPage(WebDriverWrapper driver) throws Exception {
         super(driver);
         web = new WebElementsActions(driver);
     }
@@ -42,7 +42,7 @@ public class LoginPage extends Page{
 
             //log.ree
         }
-        Assert.assertTrue("Incorrect work login form", web.isElementPresent("Logo"));
+        Assert.assertTrue(web.isElementPresent("Logo"), "Incorrect work login form");
     }
 
 

@@ -1,12 +1,15 @@
+/*
 package ua.artcode.week2.day2;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+*/
 /**
  * Created by ViTaLES on 11.10.2015.
- */
+ *//*
+
 public class LoginTest extends TestBase{
 
 
@@ -27,3 +30,4 @@ public class LoginTest extends TestBase{
     }
 
 }
+*/

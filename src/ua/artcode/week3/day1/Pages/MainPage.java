@@ -1,7 +1,5 @@
 package ua.artcode.week3.day1.Pages;
 
-import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import ua.artcode.week3.day1.utils.PropertyLoader;
 import ua.artcode.week3.day1.utils.WebDriverWrapper;
 import ua.artcode.week3.day1.utils.WebElementsActions;
@@ -14,9 +12,12 @@ import java.io.IOException;
 public class MainPage extends Page{
 
     private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
+    public WebElementsActions web;
+
 
     public MainPage(WebDriverWrapper driver) {
         super(driver, MAIN_PAGE);
+        web = new WebElementsActions(driver);
     }
 
     public void clickLogo() throws IOException {

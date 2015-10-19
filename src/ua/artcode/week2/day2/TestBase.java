@@ -1,3 +1,4 @@
+/*
 package ua.artcode.week2.day2;
 
 import org.junit.AfterClass;
@@ -5,9 +6,11 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+*/
 /**
  * Created by ViTaLES on 11.10.2015.
- */
+ *//*
+
 public class TestBase {
 
     public static WebDriver driver;
@@ -26,3 +29,4 @@ public class TestBase {
         driver.quit();
     }
 }
+*/

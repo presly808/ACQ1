@@ -2,6 +2,5 @@
 <suite name ="globalSuite" verbose="1">
     <suite-files>
         <suite-file path="test.xml"/>
-        <suite-file path="functional.xml"/>
     </suite-files>
 </suite>

@@ -2,7 +2,7 @@
 <suite name="firstTestSuite" verbose="1" >
     <test name="SmokeTest">
         <classes>
-            <class name="trainings.testng.sample0.FirstTest"/>
+            <class name="ua.artcode.week3.day1.Tests.LoginTest"/>
         </classes>
     </test>
 </suite>
