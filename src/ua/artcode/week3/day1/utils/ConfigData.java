@@ -25,7 +25,7 @@ public class ConfigData {
 
     public static By ui(String key) throws IOException {
         String[] partsOfLocators = getValueFromFile(key, uiMappingFile).split("\"");
-        String findMetod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
+        String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
         String target = partsOfLocators[1];
 
 /*        System.out.println(key);                //Logo
@@ -33,17 +33,33 @@ public class ConfigData {
         System.out.println(findMetod);          //cssSelector
         System.out.println(target);             //.ellos.active*/
 
-        // name.
-        if(findMetod.equals("id")){
+        // Return By class with appropriate method and target
+        if (findMethod.equals("id")){
             return By.id(target);
         } else {
-            if (findMetod.equals("xpath")) {
+            if (findMethod.equals("xpath")){
                 return By.xpath(target);
             } else {
-                if (findMetod.equals("cssSelector")){
-                    return By.cssSelector(target);
+                if (findMethod.equals("name")){
+                    return By.name(target);
                 } else {
-                    return By.partialLinkText(target);
+                    if (findMethod.equals("linkText")){
+                        return By.linkText(target);
+                    } else {
+                        if (findMethod.equals("tagName")){
+                            return By.tagName(target);
+                        } else {
+                            if (findMethod.equals("className")){
+                                return By.className(target);
+                            } else {
+                                if (findMethod.equals("cssSelector")){
+                                    return By.cssSelector(target);
+                                } else {
+                                    return By.partialLinkText(target);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
