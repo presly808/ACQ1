@@ -1,8 +1,8 @@
 package ua.artcode.week3.day1.utils;
 
-import org.testng.Assert;
-
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -12,23 +12,24 @@ public class PropertyLoader {
 
     private static final String PROPERTY_FILE = "/application.properties";
 
-    public static String loadProperty(String name) {
-        Properties props = new Properties();
-        try {
-            props.load(PropertyLoader.class.getResourceAsStream(PROPERTY_FILE));
-        } catch (IOException e) {
-            e.printStackTrace();
-            //TODO add logger
-            Assert.fail("Incorrect properties name - " + name);
-        }
+    private static Map propertiesMap;
 
-        String value = "";
-        if (name != null) {
-            value = props.getProperty(name);
-        }
+    public synchronized static String loadProperty(String name) {
 
-        return value;
+        if (propertiesMap == null) {
+            loadAllData();
+        }
+        return String.valueOf(propertiesMap.get(name));
     }
 
+    private static synchronized void loadAllData() {
+        Properties properties = new Properties();
+        try {
+            properties.load(PropertyLoader.class.getResourceAsStream(PROPERTY_FILE));
+            propertiesMap = properties;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

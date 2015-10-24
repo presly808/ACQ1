@@ -10,9 +10,6 @@ import ua.artcode.week3.day1.utils.WebDriverWrapper;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by ViTaLES on 11.10.2015.
- */
 public class Fixture {
 
     public static WebDriverWrapper driverWrapper;
@@ -20,7 +17,7 @@ public class Fixture {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        driverWrapper = new WebDriverWrapper(WebDriverFactory.initDriver());
+        driverWrapper = WebDriverFactory.initDriver();// wrong place be carefully with wrappers
         driverWrapper.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
         try {
