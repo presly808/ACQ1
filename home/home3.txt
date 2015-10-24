@@ -1,0 +1,42 @@
+Week Topics:
+
+	1. Selenium wait
+
+	Explicit and Implicit Waits
+
+	2. Log4j
+		- log4j.properties
+		- Appenders
+
+
+	3. Wrappers
+		- PropertyLoader
+		- Page(basic class for all pages)
+		- Ellos(container class)
+		- WebDriverWraper
+		- WebFactory(driver initialization class)
+
+
+Home tasks:
+
+1. Create new project and move all the classes (from week3) in the new project
+2. Write 100+ locators from the ellos.se, using all types of locators (put all locators to UIMapping.properties)
+3. Complete all tests for login, registration and add product to basket functions (You should have 3 test class with test methods)
+All tests must be covered by logs.
+3. Clear up/debug framework architecture
+
+
+
+
+Read / watch
+
+Wait
+    http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp
+    http://selenium2.ru/docs/webdriver-advanced-usage.html
+
+Log4j
+    https://www.youtube.com/watch?v=lepwubmYGQc&list=PLoij6udfBncgmth0XgJlGRpEomKV-lp7U
+
+DesiredCapabilities
+    https://code.google.com/p/selenium/wiki/DesiredCapabilities
+    https://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/remote/DesiredCapabilities.html
