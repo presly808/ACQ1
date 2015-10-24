@@ -28,6 +28,7 @@ public abstract class Page {
 
     public Page(WebDriverWrapper driver) {
         this.driverWrapper = driver;
+        web = new WebElementsActions(driverWrapper);
     }
 
     public boolean openPage(){

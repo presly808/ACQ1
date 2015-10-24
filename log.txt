@@ -1,0 +1,2 @@
+147965 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+110751 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"

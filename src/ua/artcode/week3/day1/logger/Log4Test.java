@@ -26,7 +26,7 @@ public class Log4Test {
         Appender appenderConsole = new ConsoleAppender(layout);
 
         try {
-            LOGGER.addAppender(new FileAppender(layout, "/src/log.txt"));
+            LOGGER.addAppender(new FileAppender(layout, "log.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }

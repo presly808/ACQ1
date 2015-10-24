@@ -22,7 +22,7 @@ public class LoginTest extends Fixture {
         ellos.loginPage.fillEmailField();
 
         ellos.loginPage.fillPasswordField();
-        ellos.loginPage.clickloginButton();
+        ellos.loginPage.clickloginButton();// cant find element
 
     }
 
