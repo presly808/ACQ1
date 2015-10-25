@@ -1,4 +1,4 @@
-package ua.artcode.week3.day1.Tests;
+package Tests;
 
 
 import org.testng.annotations.AfterClass;
