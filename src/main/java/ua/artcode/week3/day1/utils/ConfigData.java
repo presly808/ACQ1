@@ -11,13 +11,13 @@ import java.util.Properties;
 public class ConfigData {
 
 
-    //TODO Изменить после дзена Maven
-    public static String uiMappingFile = "src/UIMapping.properties";
+    //TODO Maven
+    public static String uiMappingFile = "/UIMapping.properties";
 
     public static String getValueFromFile(String key, String fileName) throws IOException {
         Properties p = new Properties();
 
-        p.load(new InputStreamReader(new FileInputStream(fileName), "UTF-8"));
+        p.load(ConfigData.class.getResourceAsStream(uiMappingFile));
 
         return (p.getProperty(key));
     }
@@ -34,25 +34,25 @@ public class ConfigData {
         System.out.println(target);             //.ellos.active*/
 
         // Return By class with appropriate method and target
-        if (findMethod.equals("id")){
+        if (findMethod.equals("id")) {
             return By.id(target);
         } else {
-            if (findMethod.equals("xpath")){
+            if (findMethod.equals("xpath")) {
                 return By.xpath(target);
             } else {
-                if (findMethod.equals("name")){
+                if (findMethod.equals("name")) {
                     return By.name(target);
                 } else {
-                    if (findMethod.equals("linkText")){
+                    if (findMethod.equals("linkText")) {
                         return By.linkText(target);
                     } else {
-                        if (findMethod.equals("tagName")){
+                        if (findMethod.equals("tagName")) {
                             return By.tagName(target);
                         } else {
-                            if (findMethod.equals("className")){
+                            if (findMethod.equals("className")) {
                                 return By.className(target);
                             } else {
-                                if (findMethod.equals("cssSelector")){
+                                if (findMethod.equals("cssSelector")) {
                                     return By.cssSelector(target);
                                 } else {
                                     return By.partialLinkText(target);

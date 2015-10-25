@@ -1,2 +1,8 @@
 147965 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
 110751 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+41720 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+107612 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+104729 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+65049 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+90212 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+99007 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
