@@ -6,3 +6,4 @@
 65049 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
 90212 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
 99007 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
+25391 [main] INFO ua.artcode.week3.day1.logger.Log4Test  - INFO: "Finish Test Suite execution"
