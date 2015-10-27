@@ -1,12 +1,11 @@
 package Tests;
 
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import ua.artcode.week3.day1.Pages.Ellos;
-import ua.artcode.week3.day1.logger.Log4Test;
-import ua.artcode.week3.day1.utils.WebDriverFactory;
-import ua.artcode.week3.day1.utils.WebDriverWrapper;
+import logger.Log4Test;
+import org.testng.annotations.*;
+import pages.Ellos;
+import utils.WebDriverFactory;
+import utils.WebDriverWrapper;
 
 import java.util.concurrent.TimeUnit;
 
