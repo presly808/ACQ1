@@ -1,0 +1,26 @@
+1. Git 
+	https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
+	1) https://try.github.io/levels/1/challenges/1
+	2) https://www.atlassian.com/git/tutorials/
+	3) https://git-scm.com/book/en/v2
+
+	video http://www.ex.ua/79601047 
+
+2. Maven 
+
+	Build tool - Maven
+	- OS variables: JAVA_HOME, M2_HOME
+	- folder structure
+	- pom.xml
+	
+	lifecycle -> sequence of goals
+	goals - actions of plugin
+
+	- dependencies
+	- local and remote repositories
+
+
+3. Finish all tasks
+
+
+`
