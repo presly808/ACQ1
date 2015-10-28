@@ -1,26 +1,39 @@
-1. Git 
-	https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
-	1) https://try.github.io/levels/1/challenges/1
-	2) https://www.atlassian.com/git/tutorials/
-	3) https://git-scm.com/book/en/v2
+Week Topics:
 
-	video http://www.ex.ua/79601047 
+	1. Git
+		https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
+		1) https://try.github.io/levels/1/challenges/1
+		2) https://www.atlassian.com/git/tutorials/
+		3) https://git-scm.com/book/en/v2
 
-2. Maven 
+		video http://www.ex.ua/79601047
 
-	Build tool - Maven
-	- OS variables: JAVA_HOME, M2_HOME
-	- folder structure
-	- pom.xml
-	
-	lifecycle -> sequence of goals
-	goals - actions of plugin
+	2. Maven
 
-	- dependencies
-	- local and remote repositories
+		Build tool - Maven
+		- OS variables: JAVA_HOME, M2_HOME
+		- folder structure
+		- pom.xml
+
+		lifecycle -> sequence of goals
+		goals - actions of plugin
+
+		- dependencies
+		- local and remote repositories
 
 
-3. Finish all tasks
+Home tasks:
 
+1. Create NEW Maven project and move all our classes to new project
+2. Pull you project to your gitHub
+3. Write 100+ locators from the ellos.se, using all types of locators (put all locators to UIMapping.properties)
+4. Complete all tests for next login functions:
+	- login;
+	- registration;
+	- product page;
+	- add product to basket.
+	As result you must have 4 test class with test methods!
 
-`
+Addition task for nerd:
+*5. All tests must be covered by logs and screens.
+
